@@ -21,3 +21,10 @@
 cd backend
 npm install
 node server.js
+
+### Frontend
+
+```bash
+cd frontend
+npm install
+npm start
