@@ -28,3 +28,12 @@ node server.js
 cd frontend
 npm install
 npm start
+
+📦 Folder Schema
+
+{
+  name: String,
+  type: "folder" | "file",
+  content: String, // only for files
+  parent: ObjectId | null
+}
