@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const API = "http://localhost:5000/api/folders";
+const API = "http://localhost:8020/api/folders";
 
 const FolderTree = ({ tree, refresh }) => {
   const [selectedId, setSelectedId] = useState(null);
