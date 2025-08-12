@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import FolderTree from "./components/FolderTree";
 
-const API = "http://localhost:5000/api/folders";
+const API = "http://localhost:8020/api/folders";
 
 function App() {
   const [tree, setTree] = useState([]);
