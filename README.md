@@ -21,3 +21,19 @@
 cd backend
 npm install
 node server.js
+
+### Frontend
+
+```bash
+cd frontend
+npm install
+npm start
+
+📦 Folder Schema
+
+{
+  name: String,
+  type: "folder" | "file",
+  content: String, // only for files
+  parent: ObjectId | null
+}
