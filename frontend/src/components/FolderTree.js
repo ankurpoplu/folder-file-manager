@@ -41,10 +41,17 @@ const FolderTree = ({ tree, refresh }) => {
         >
           {node.type === "folder" ? "📁" : "📄"} {node.name}
         </span>{" "}
-        <button onClick={() => handleAdd(node._id, "folder")}>+Folder</button>
-        <button onClick={() => handleAdd(node._id, "file")}>+File</button>
-        <button onClick={() => handleRename(node._id)}>Rename</button>
-        <button onClick={() => handleDelete(node._id)}>Delete</button>
+        {node.type === "folder" ? (
+          <>
+            <button onClick={() => handleAdd(node._id, "folder")}>+Folder</button>
+            <button onClick={() => handleAdd(node._id, "file")}>+File</button>
+            <button onClick={() => handleRename(node._id)}>Rename</button>
+            <button onClick={() => handleDelete(node._id)}>Delete</button>
+          </>) :
+          (<>
+            <button onClick={() => handleRename(node._id)}>Rename</button>
+            <button onClick={() => handleDelete(node._id)}>Delete</button>
+          </>)}
 
         {node.children && node.children.length > 0 && renderTree(node.children)}
       </div>
